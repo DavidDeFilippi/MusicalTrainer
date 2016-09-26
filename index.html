@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Piano</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+  <!-- Recursos de audio -->
+<audio id="audioeffect">
+  <source src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="audioC1">
+  <source src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="audioC1sharp">
+  <source src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="audioD1">
+  <source src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="audioD1sharp">
+  <source src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="audioE1">
+  <source src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="audioF1">
+  <source src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="audioF1sharp">
+  <source src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="audioG1">
+  <source src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="audioG1sharp">
+  <source src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="audioA1">
+  <source src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="audioA1sharp">
+  <source src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="audioB1">
+  <source src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="audioC2">
+  <source src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="audioC2sharp">
+  <source src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="audioD2">
+  <source src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="audioD2sharp">
+  <source src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="audioE2">
+  <source src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="audioF2">
+  <source src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="audioF2sharp">
+  <source src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="audioG2">
+  <source src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="audioG2sharp">
+  <source src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="audioA2">
+  <source src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="audioA2sharp">
+  <source src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="audioB2">
+  <source src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="audioC3">
+  <source src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="audioC3sharp">
+  <source src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="audioD3">
+  <source src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="audioD3sharp">
+  <source src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="audioE3">
+  <source src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="audioF3">
+  <source src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="audioF3sharp">
+  <source src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="audioG3">
+  <source src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="audioG3sharp">
+  <source src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="audioA3">
+  <source src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="audioA3sharp">
+  <source src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="audioB3">
+  <source src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<!-- Fin recursos de audio -->
+<!-- Elementos de la app -->
+<div id="contenedor">
+  <div id="arriba">
+    <header>
+      <div id="logo"><h1></h1></div>
+    </header>
+    <main>
+      <nav>
+        <ul>
+          <li><a id="home" href="#" onclick="pageMenu(id)">Inicio</a></li>
+          <li><a id="demo-songs" href="#" onclick="changeFrame(id)">Canciones</a></li>
+        </ul>
+      </nav>
+      <div id="principal">
+
+      </div>
+      <div id="options">
+        <table id="tablaopciones">
+          <tr><th>Opciones</th></tr>
+          <tr><td>Nombres de las teclas</td>
+            <td><input type="checkbox" id="nombreteclas" onmouseup="nombreNota()" checked /></td></tr>
+
+            <tr><td>Notación musical</td><td><select id="selecttiponota" onchange="cambiarNombreTecla()">
+              <option value="doremi">Do-Re-Mi</option>
+              <option value="abc">A-B-C</option>
+            </select></td></tr>
+
+          <tr><td>Instrumento</td><td><select id="selectInstrumento" onchange="cambiarInstrumento()">
+            <option value="piano">Piano</option>
+            <option value="arpa">Arpa</option>
+            <option value="clave">Clave</option>
+          </select></td></tr>
+        </table>
+        <div id="dataKeyboard">
+        <p>Nota: <b><a id="muestra-nota">--</a></b></p>
+        <p>Teclado: <b><a id="estado-teclado">Desbloqueado</a></b></p>
+        </div>
+        <p id="dev-out"></p>
+        <button type="button" name="button" onclick="metodoDePruebas()">button-out</button>
+        <p style="display:none;" id="no-muestra-nota"></p>
+      </div>
+    </main>
+    <footer></footer>
+  </div>
+  <div id="teclado" onmouseover="cambiarPuntero(id)">
+    <div class="key" id="C1" onmousedown="toca(id), listenKey(id)" onmouseenter="marcar(id)" onmouseleave="desmarcar(id)">
+
+        <p class="keyname" id="keyname0"></p>
+    </div>
+    <div class="keyBlack" id="C1sharp" onmousedown="toca(id), listenKey(id)"  onmouseenter="marcar(id)" onmouseleave="desmarcar(id)">
+
+        <p class="keynamesharp" id="keyname1"></p>
+    </div>
+    <div class="key" id="D1" onmousedown="toca(id), listenKey(id)"  onmouseenter="marcar(id)" onmouseleave="desmarcar(id)">
+
+        <p class="keyname" id="keyname2"></p>
+    </div>
+    <div class="keyBlack" id="D1sharp" onmousedown="toca(id), listenKey(id)"  onmouseenter="marcar(id)" onmouseleave="desmarcar(id)">
+
+        <p class="keynamesharp" id="keyname3"></p>
+    </div>
+    <div class="key" id="E1" onmousedown="toca(id), listenKey(id)"  onmouseenter="marcar(id)" onmouseleave="desmarcar(id)">
+
+        <p class="keyname" id="keyname4"></p>
+    </div>
+    <div class="key" id="F1" onmousedown="toca(id), listenKey(id)"  onmouseenter="marcar(id)" onmouseleave="desmarcar(id)">
+
+        <p class="keyname" id="keyname5"></p>
+    </div>
+    <div class="keyBlack" id="F1sharp" onmousedown="toca(id), listenKey(id)"  onmouseenter="marcar(id)" onmouseleave="desmarcar(id)">
+
+        <p class="keynamesharp" id="keyname6"></p>
+    </div>
+    <div class="key" id="G1" onmousedown="toca(id), listenKey(id)"  onmouseenter="marcar(id)" onmouseleave="desmarcar(id)">
+
+        <p class="keyname" id="keyname7"></p>
+    </div>
+    <div class="keyBlack" id="G1sharp" onmousedown="toca(id), listenKey(id)"  onmouseenter="marcar(id)" onmouseleave="desmarcar(id)">
+
+        <p class="keynamesharp" id="keyname8"></p>
+    </div>
+    <div class="key" id="A1" onmousedown="toca(id), listenKey(id)"  onmouseenter="marcar(id)" onmouseleave="desmarcar(id)">
+
+        <p class="keyname" id="keyname9"></p>
+    </div>
+    <div class="keyBlack" id="A1sharp" onmousedown="toca(id), listenKey(id)"  onmouseenter="marcar(id)" onmouseleave="desmarcar(id)">
+
+        <p class="keynamesharp" id="keyname10"></p>
+    </div>
+    <div class="key" id="B1" onmousedown="toca(id), listenKey(id)"  onmouseenter="marcar(id)" onmouseleave="desmarcar(id)">
+
+        <p class="keyname" id="keyname11"></p>
+    </div>
+    <div class="key" id="C2" onmousedown="toca(id), listenKey(id)"  onmouseenter="marcar(id)" onmouseleave="desmarcar(id)">
+
+        <p class="keyname" id="keyname12"></p>
+    </div>
+    <div class="keyBlack" id="C2sharp" onmousedown="toca(id), listenKey(id)"  onmouseenter="marcar(id)" onmouseleave="desmarcar(id)">
+
+        <p class="keynamesharp" id="keyname13"></p>
+    </div>
+    <div class="key" id="D2" onmousedown="toca(id), listenKey(id)"  onmouseenter="marcar(id)" onmouseleave="desmarcar(id)">
+
+        <p class="keyname" id="keyname14"></p>
+    </div>
+    <div class="keyBlack" id="D2sharp" onmousedown="toca(id), listenKey(id)"  onmouseenter="marcar(id)" onmouseleave="desmarcar(id)">
+
+        <p class="keynamesharp" id="keyname15"></p>
+    </div>
+    <div class="key" id="E2" onmousedown="toca(id), listenKey(id)"  onmouseenter="marcar(id)" onmouseleave="desmarcar(id)">
+
+        <p class="keyname" id="keyname16"></p>
+    </div>
+    <div class="key" id="F2" onmousedown="toca(id), listenKey(id)"  onmouseenter="marcar(id)" onmouseleave="desmarcar(id)">
+
+        <p class="keyname" id="keyname17"></p>
+    </div>
+    <div class="keyBlack" id="F2sharp" onmousedown="toca(id), listenKey(id)"  onmouseenter="marcar(id)" onmouseleave="desmarcar(id)">
+
+        <p class="keynamesharp" id="keyname18"></p>
+    </div>
+    <div class="key" id="G2" onmousedown="toca(id), listenKey(id)"  onmouseenter="marcar(id)" onmouseleave="desmarcar(id)">
+
+        <p class="keyname" id="keyname19"></p>
+    </div>
+    <div class="keyBlack" id="G2sharp" onmousedown="toca(id), listenKey(id)"  onmouseenter="marcar(id)" onmouseleave="desmarcar(id)">
+
+        <p class="keynamesharp" id="keyname20"></p>
+    </div>
+    <div class="key" id="A2" onmousedown="toca(id), listenKey(id)"  onmouseenter="marcar(id)" onmouseleave="desmarcar(id)">
+
+        <p class="keyname" id="keyname21"></p>
+    </div>
+    <div class="keyBlack" id="A2sharp" onmousedown="toca(id), listenKey(id)"  onmouseenter="marcar(id)" onmouseleave="desmarcar(id)">
+
+        <p class="keynamesharp" id="keyname22"></p>
+    </div>
+    <div class="key" id="B2" onmousedown="toca(id), listenKey(id)"  onmouseenter="marcar(id)" onmouseleave="desmarcar(id)">
+
+        <p class="keyname" id="keyname23"></p>
+    </div>
+    <div class="key" id="C3" onmousedown="toca(id), listenKey(id)"  onmouseenter="marcar(id)" onmouseleave="desmarcar(id)">
+
+        <p class="keyname" id="keyname24"></p>
+    </div>
+    <div class="keyBlack" id="C3sharp" onmousedown="toca(id), listenKey(id)"  onmouseenter="marcar(id)" onmouseleave="desmarcar(id)">
+
+        <p class="keynamesharp" id="keyname25"></p>
+    </div>
+    <div class="key" id="D3" onmousedown="toca(id), listenKey(id)"  onmouseenter="marcar(id)" onmouseleave="desmarcar(id)">
+
+        <p class="keyname" id="keyname26"></p>
+    </div>
+    <div class="keyBlack" id="D3sharp" onmousedown="toca(id), listenKey(id)"  onmouseenter="marcar(id)" onmouseleave="desmarcar(id)">
+
+        <p class="keynamesharp" id="keyname27"></p>
+    </div>
+    <div class="key" id="E3" onmousedown="toca(id), listenKey(id)"  onmouseenter="marcar(id)" onmouseleave="desmarcar(id)">
+
+        <p class="keyname" id="keyname28"></p>
+    </div>
+    <div class="key" id="F3" onmousedown="toca(id), listenKey(id)"  onmouseenter="marcar(id)" onmouseleave="desmarcar(id)">
+
+        <p class="keyname" id="keyname29"></p>
+    </div>
+    <div class="keyBlack" id="F3sharp" onmousedown="toca(id), listenKey(id)"  onmouseenter="marcar(id)" onmouseleave="desmarcar(id)">
+
+        <p class="keynamesharp" id="keyname30"></p>
+    </div>
+    <div class="key" id="G3" onmousedown="toca(id), listenKey(id)"  onmouseenter="marcar(id)" onmouseleave="desmarcar(id)">
+
+        <p class="keyname" id="keyname31"></p>
+    </div>
+    <div class="keyBlack" id="G3sharp" onmousedown="toca(id), listenKey(id)"  onmouseenter="marcar(id)" onmouseleave="desmarcar(id)">
+
+        <p class="keynamesharp" id="keyname32"></p>
+    </div>
+    <div class="key" id="A3" onmousedown="toca(id), listenKey(id)"  onmouseenter="marcar(id)" onmouseleave="desmarcar(id)">
+
+        <p class="keyname" id="keyname33"></p>
+    </div>
+    <div class="keyBlack" id="A3sharp" onmousedown="toca(id), listenKey(id)"  onmouseenter="marcar(id)" onmouseleave="desmarcar(id)">
+
+        <p class="keynamesharp" id="keyname34"></p>
+    </div>
+    <div class="key" id="B3" onmousedown="toca(id), listenKey(id)"  onmouseenter="marcar(id)" onmouseleave="desmarcar(id)">
+
+        <p class="keyname" id="keyname35"></p>
+    </div>
+  </div>
+</div>
+<!-- Fin elementos de la app -->
+<script>
+</script>
+</body>
+<script src="js/musicaltrainer.js"></script>
+</html>

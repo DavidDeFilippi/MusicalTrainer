@@ -1,0 +1,17 @@
+<div class="frame" onmouseenter="addOptions()">
+  <h2>Canciones Demos de Musical Trainer</h2>
+  <p>Aquí puedes reproducir algunas canciones para demostrar el funcionamiento del piano web</p>
+  <br>
+  <select id="selectCancion">
+  	<option value="fur-elise">Beethoven - Para Elisa</option>
+  	<option value="jesu">J. S. Bach - Jesu, Joy of Man's Desiring</option>
+  	<option value="frozen">Frozen - Libre soy</option>
+  </select><br>
+  <button id="btnReproducir" onclick="cancionXML()">Reproducir</button>
+  <button id="btnDetener" onclick="pararCancion()">Detener</button><br>
+  <table style="width: 100px; margin: auto;"><tr><td><p>Tempo: </p></td>
+  <td>
+	<select id="tempo" onchange="modificarTempo()">
+	</select>
+	</td></tr></table>
+</div>
